@@ -1,60 +1,100 @@
 /* General styling */
 body {
-    background-color: #f5e8d8; /* Light tan background - reminiscent of a dog's fur */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
- }
- 
- 
- /* Header styling */
- h1 {
-    background-color: #8b5a2b; /* Brown color - like a dog's collar */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin: 0;
- }
- 
- 
- h2 {
-    color: #5d4037; /* Darker brown for subheadings */
-    padding: 10px;
-    border-bottom: 2px solid #8b5a2b;
- }
- 
- 
- h3 {
-    color: #6d4c41; /* Medium brown for smaller headings */
- }
- 
- 
- /* List styling */
- ul {
-    list-style-type: none; /* Removes default bullets */
-    padding: 0;
-    margin: 20px;
- }
- 
- 
- ul li {
-    background: url('https://via.placeholder.com/15/8b5a2b/8b5a2b?text=+') no-repeat left center; /* Paw print bullet replacement */
-    padding-left: 25px; /* Space for the custom bullet */
-    margin: 10px 0;
-    color: #4e342e;
- }
- 
- 
- /* Optional: Ordered list styling */
- ol {
-    padding: 20px;
-    margin: 20px;
-    color: #4e342e;
- }
- 
- 
- ol li {
-    margin: 10px 0;
-    padding-left: 10px;
- }
- 
+   background-color: #f5e8d8;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+h1 {
+   background-color: #8b5a2b;
+   color: white;
+   padding: 20px;
+   text-align: center;
+   margin: 0;
+}
+
+h2 {
+   color: #5d4037;
+   padding: 10px;
+}
+
+h3 {
+   color: #6d4c41;
+}
+
+h4 {
+   color: #6d4c41;
+   margin-bottom: 10px;
+}
+
+ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 20px;
+}
+
+ul li {
+   background: url('https://via.placeholder.com/15/8b5a2b/8b5a2b?text=+') no-repeat left center;
+   padding-left: 25px;
+   margin: 10px 0;
+   color: #4e342e;
+}
+
+nav {
+   background-color: #8b5a2b;
+   padding: 15px 0;
+   text-align: center;
+}
+
+nav button {
+   background-color: #6d4c41;
+   color: white;
+   border: 2px solid #4e342e;
+   padding: 10px 20px;
+   margin: 0 15px;
+   cursor: pointer;
+   font-size: 16px;
+   border-radius: 8px;
+}
+
+nav button:hover {
+   background-color: #4e342e;
+}
+
+aside {
+   margin: 20px;
+   padding: 10px;
+   background-color: #f5e8d8;
+}
+
+a {
+   color: #6d4c41;
+   text-decoration: none;
+}
+
+a:hover {
+   color: #4e342e;
+   text-decoration: underline;
+}
+
+/* Image section styling */
+section.images-section {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   margin: 20px 0;
+   padding: 10px;
+   background-color: #f0e4d0;
+   border: 1px solid #8b5a2b;
+   border-radius: 5px;
+}
+
+section.images-section img {
+   width: 150px;
+   height: 150px;
+   border: 2px solid #8b5a2b;
+   border-radius: 5px;
+   object-fit: cover;
+}
