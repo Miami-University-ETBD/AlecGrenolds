@@ -140,6 +140,7 @@
             padding: 15px 0;
         }
     </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <nav class="header-bg">
@@ -178,7 +179,20 @@
             </div>
         </div>
     </div>
-
+   <ul class="collapsible">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+      </ul>
     <div id="menu" class="section">
         <div class="container">
             <h2>Dog Care Tips</h2>
@@ -239,6 +253,23 @@
             </table>
         </div>
     </div>
+    <div class="carousel">
+                <a class="carousel-item" href="#one!">
+                    <img src="Screenshot 2025-04-07 at 11.25.18 PM.png" style="width: 150px; height: auto;">
+                </a>
+                <a class="carousel-item" href="#two!">
+                    <img src="Screenshot 2025-04-07 at 11.25.54 PM.png" style="width: 150px; height: auto;">
+                </a>
+                <a class="carousel-item" href="#three!">
+                    <img src="Screenshot 2025-04-07 at 11.26.10 PM.png" style="width: 150px; height: auto;">
+                </a>
+                <a class="carousel-item" href="#four!">
+                    <img src="Screenshot 2025-04-07 at 11.26.38 PM.png" style="width: 150px; height: auto;">
+                </a>
+                <a class="carousel-item" href="#five!">
+                    <img src="Screenshot 2025-04-07 at 11.27.03 PM.png" style="width: 150px; height: auto;">
+                </a>
+            </div>
 
     <div id="contact" class="section section-bg">
         <div class="container">
@@ -281,9 +312,18 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script >  document.addEventListener('DOMContentLoaded', function() {
+    <script> 
+        
+        document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.collapsible');
-        var instances = M.Collapsible.init(elems, options);
-      });</script>
+        var instances = M.Collapsible.init(elems);
+      });
+        
+          document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems);
+  });
+        
+    </script>
 </body>
 </html>
