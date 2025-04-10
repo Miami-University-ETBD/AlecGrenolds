@@ -2,61 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Care Checklist</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <title>Dog Care Checklist</title>
     <style>
-        /* Override Materialize global styles for header and nav consistency */
         body {
             margin: 0;
+            background-color: #f5e8d8;
+            font-family: Arial, sans-serif;
         }
-        header h1 {
+        .header-bg {
             background-color: #8b5a2b;
+        }
+        .section-bg {
+            background-color: #f5e8d8;
+        }
+        .shadow {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .table-header {
+            background-color: #6d4c41;
             color: white;
-            padding: 20px;
-            text-align: center;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            font-size: 2em;
-            line-height: normal;
-            font-weight: bold;
         }
-        header p {
-            color: #4e342e;
-            text-align: center;
-            margin: 5px 0; /* Reduced margin to bring nav closer */
-            font-family: Arial, sans-serif;
-            font-size: 1em;
-            line-height: 1.5;
+        .nav-wrapper {
+            display: inline-block;
+            padding: 5px 0;
         }
-        nav {
-            background-color: #8b5a2b;
-            padding: 5px 0; /* Reduced top padding to bring nav closer to header */
-            text-align: center;
-            margin: 0;
-        }
-        nav a, nav button {
+        .nav-wrapper a {
             background-color: #6d4c41 !important;
             color: white !important;
-            border: none !important; /* Remove the border (inside lines) */
-            padding: 10px 20px;
-            margin: 0 15px;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
+            padding: 10px 20px !important;
+            margin: 0 15px !important;
+            border: 2px solid #4e342e !important;
+            border-radius: 8px !important;
+            font-family: Arial, sans-serif !important;
+            font-size: 16px !important;
         }
-        nav a:hover, nav button:hover {
+        .nav-wrapper a:hover {
             background-color: #4e342e !important;
         }
-        /* Custom Materialize styles for content */
-        .container h2 {
+        h1.white-text, p.white-text {
+            color: white !important;
+        }
+        h2 {
             color: #5d4037 !important;
         }
-        .container p {
-            color: #4e342e;
+        p {
+            color: #4e342e !important;
         }
         .collection-item {
             color: #4e342e !important;
@@ -70,78 +64,226 @@
             border: none !important;
             margin: 20px !important;
         }
+        .page-footer {
+            background-color: #8b5a2b !important;
+        }
+        .page-footer p {
+            color: white !important;
+        }
+
+        nav.header-bg {
+            padding: 10px 0;
+        }
+        .section.header-bg {
+            padding-bottom: 20px;
+        }
+        .section.header-bg h1 {
+            margin-bottom: 15px;
+        }
+        .section.header-bg p {
+            margin: 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        #about .container .row:first-child {
+            margin-bottom: 30px;
+        }
+        #about .col h2 {
+            margin-bottom: 20px;
+        }
+        #about .col p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        #about .video-container {
+            margin-top: 20px;
+        }
+
+        #menu .container h2 {
+            margin-bottom: 20px;
+        }
+        #menu .container p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        #menu table th, #menu table td {
+            padding: 12px;
+        }
+        #menu .collection {
+            margin: 20px 0 !important;
+        }
+        #menu .collection-item {
+            margin-bottom: 10px;
+        }
+
+        #contact {
+            margin-bottom: 20px;
+        }
+        #contact .container h2 {
+            margin-bottom: 20px;
+        }
+        #contact .input-field {
+            margin-bottom: 20px;
+        }
+        #contact .col h5 {
+            margin-bottom: 15px;
+        }
+        #contact .col p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .page-footer {
+            padding: 15px 0;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Dog Care Checklist</h1>
-        <nav>
-            <a href="index.html"><button>Home</button></a>
-            <a href="dog_of_the_week.html"><button>Dog of the Week</button></a>
-            <a href="materialize.html"><button>Dog Care Checklist</button></a>
-            <a href="about_me.html"><button>About Me</button></a>
-        </nav>
-        <p>Everything you need to keep your furry friend happy and healthy!</p>
-    </header>
-
-    <section class="center-align container">
-        <h2>Greta in Action!</h2>
-        <img src="IMG_6222.jpeg" alt="Greta with Pink Collar" class="circle responsive-img">
-        <p>Watch some amazing dog care tips below!</p>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=peUVLEUj-AM" frameborder="0" allowfullscreen></iframe>
+    <nav class="header-bg">
+        <div class="nav-wrapper center-align">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dog_of_the_week.html">Dog of the Week</a></li>
+                <li><a href="materialize.html">Dog Care Checklist</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+            </ul>
         </div>
-    </section>
+    </nav>
 
-    <main class="container">
-        <section>
-            
+    <div class="section header-bg center-align">
+        <h1 class="white-text">Dog Care Checklist</h1>
+        <p class="white-text">Everything you need to keep your furry friend happy and healthy!</p>
+    </div>
+
+    <div id="about" class="section section-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <h2>Greta in Action!</h2>
+                    <p>Watch some amazing dog care tips below!</p>
+                </div>
+                <div class="col s12 m6" style="max-width: 150px;">
+                    <img src="IMG_6222.jpeg" alt="Greta Upside Down" class="circle responsive-img shadow" style="width: 150px; height: 150px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/peUVLEUj-AM" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu" class="section">
+        <div class="container">
+            <h2>Dog Care Tips</h2>
             <p>Overview of a few basic necessities to properly take care of your furry friend!</p>
-            <h2>Basic Needs</h2>
-            <ul class="collection">
-                <li class="collection-item">Fresh water available at all times</li>
-                <li class="collection-item">Nutritious food suited for their breed and age</li>
-                <li class="collection-item">Regular exercise and playtime</li>
-                <li class="collection-item">Comfortable sleeping area</li>
-            </ul>
-        </section>
+            <table class="highlight">
+                <thead class="table-header">
+                    <tr>
+                        <th>Category</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic Needs</td>
+                        <td>
+                            <ul class="collection">
+                                <li class="collection-item">Fresh water available at all times</li>
+                                <li class="collection-item">Nutritious food suited for their breed and age</li>
+                                <li class="collection-item">Regular exercise and playtime</li>
+                                <li class="collection-item">Comfortable sleeping area</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Health & Grooming</td>
+                        <td>
+                            <ul class="collection">
+                                <li class="collection-item">Regular vet checkups</li>
+                                <li class="collection-item">Up-to-date vaccinations</li>
+                                <li class="collection-item">Brushing fur to prevent matting</li>
+                                <li class="collection-item">Dental care and nail trimming</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Training & Socialization</td>
+                        <td>
+                            <ul class="collection">
+                                <li class="collection-item">Basic commands (sit, stay, come)</li>
+                                <li class="collection-item">Positive reinforcement techniques</li>
+                                <li class="collection-item">Socialization with other dogs and humans</li>
+                                <li class="collection-item">Consistent training routines</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fun & Enrichment</td>
+                        <td>
+                            <ul class="collection">
+                                <li class="collection-item">Puzzle toys and treat-dispensing games</li>
+                                <li class="collection-item">Daily walks and adventures</li>
+                                <li class="collection-item">Interactive play like fetch or tug-of-war</li>
+                                <li class="collection-item">Training new tricks to keep their mind active</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-        <section>
-            <h2>Health & Grooming</h2>
-            <ul class="collection">
-                <li class="collection-item">Regular vet checkups</li>
-                <li class="collection-item">Up-to-date vaccinations</li>
-                <li class="collection-item">Brushing fur to prevent matting</li>
-                <li class="collection-item">Dental care and nail trimming</li>
-            </ul>
-        </section>
+    <div id="contact" class="section section-bg">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="row">
+                <div class="col s12 m6">
+                    <form>
+                        <div class="input-field">
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <textarea id="message" class="materialize-textarea"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn waves-effect waves-light" style="background-color: #6d4c41;">Send</button>
+                    </form>
+                </div>
+                <div class="col s12 m6">
+                    <h5>Visit Us</h5>
+                    <p>123 Dog Park Lane,<br> Furry City, FC 12345</p>
+                    <p><i class="material-icons">phone</i> (555) 123-4567</p>
+                    <p><i class="material-icons">email</i> alec.doglover@furryfriends.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <section>
-            <h2>Training & Socialization</h2>
-            <ul class="collection">
-                <li class="collection-item">Basic commands (sit, stay, come)</li>
-                <li class="collection-item">Positive reinforcement techniques</li>
-                <li class="collection-item">Socialization with other dogs and humans</li>
-                <li class="collection-item">Consistent training routines</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Fun & Enrichment</h2>
-            <p>Dogs thrive when mentally and physically engaged! Try these:</p>
-            <ul class="collection">
-                <li class="collection-item">Puzzle toys and treat-dispensing games</li>
-                <li class="collection-item">Daily walks and adventures</li>
-                <li class="collection-item">Interactive play like fetch or tug-of-war</li>
-                <li class="collection-item">Training new tricks to keep their mind active</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>2025 Furry Friends Hub - Made for Dog Lovers Everywhere</p>
+    <footer class="page-footer header-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <p class="white-text">2025 Furry Friends Hub - Made for Dog Lovers Everywhere</p>
+                </div>
+            </div>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script >  document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems, options);
+      });</script>
 </body>
 </html>
