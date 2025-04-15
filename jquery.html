@@ -6,23 +6,216 @@
     <title>jQuery Interactions - Furry Friends Hub</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        header {
+            padding-bottom: 20px;
+        }
+        header h1 {
+            margin-bottom: 15px;
+        }
+        header nav {
+            margin-bottom: 15px;
+        }
+        header nav a button {
+            margin: 0 10px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            background-color: #6d4c41;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+        header nav a button:hover {
+            background-color: #4e342e;
+        }
+        header p {
+            margin: 0;
+            color: #4e342e;
+        }
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5e8d8;
+        }
+        main section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        main section p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #f5e8d8;
+        }
+        main section h2 {
+            margin-bottom: 20px;
+            color: #f5e8d8;
+        }
+        #fade-section {
+            background-color: #af7e51;
+        }
+        #css-section {
+            background-color: #744738;
+        }
+        #filter-section {
+            background-color: #221714;
+        }
+        footer {
+            padding: 15px 0;
+            background-color: #8b5a2b;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+            color: white;
+        }
+        #fade-section button {
+            margin: 10px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            background-color: #6d4c41;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #fade-section button:hover {
+            background-color: #4e342e;
+        }
+        #dog-tip {
+            padding: 10px;
+            border: 1px solid #8b5a2b;
+            border-radius: 5px;
+            background-color: #f0e4d0;
+            color: #4e342e;
+        }
+        #css-section button {
+            margin: 10px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            background-color: #6d4c41;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #css-section button:hover {
+            background-color: #4e342e;
+        }
+        #dog-breed {
+            padding: 10px;
+            border: 1px solid #8b5a2b;
+            border-radius: 5px;
+            background-color: #f0e4d0;
+        }
+        #filter-section button {
+            margin: 10px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            background-color: #6d4c41;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #filter-section button:hover {
+            background-color: #4e342e;
+        }
+        #dog-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        #dog-list li {
+            padding: 8px;
+            border: 1px solid #8b5a2b;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            background-color: #f0e4d0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>jQuery Interactions - Furry Friends Hub</h1>
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="dog_of_the_week.html">Dog of the Week</a>
-            <a href="materialize.html">Dog Care Checklist</a>
-            <a href="about_me.html">About Me</a>
-            <a href="jquery.html">jQuery</a>
-        </div>
-        <p>Explore these fun jQuery interactions to enhance your experience with Furry Friends Hub!</p>
+        <nav>
+            <a href="index.html"><button>Home</button></a>
+            <a href="dog_of_the_week.html"><button>Dog of the Week</button></a>
+            <a href="materialize.html"><button>Dog Care Checklist</button></a>
+            <a href="about_me.html"><button>About Me</button></a>
+            <a href="jquery.html"><button>jQuery</button></a>
+        </nav>
+        <p>Explore these fun interactions to enhance your experience on the Furry Friends Hub!</p>
     </header>
-    <main></main>
+    <main>
+        <section id="fade-section">
+            <h2>Quick Dog Care Tip</h2>
+            <p>Want to see a helpful dog care tip? Use the buttons below to fade it in or out!</p>
+            <p id="dog-tip" style="display: none;">Dogs will warm up to you faster if you scratch them in areas like their chest, behind their ears, and under their chin!</p>
+            <button id="fade-in-btn">Fade In Tip</button>
+            <button id="fade-out-btn">Fade Out Tip</button>
+        </section>
+        <section id="css-section">
+            <h2>Boxer-Labrador Highlight</h2>
+            <p>Want to know more about why I love boxer-labradors so much? Click the "Reveal" button to see!</p>
+            <p id="dog-breed">Boxer-Labradors, like my Greta, are energetic, loyal, and always ready for a game of fetch or a movie on the couch!</p>
+            <button id="style-btn">Reveal</button>
+        </section>
+        <section id="filter-section">
+            <h2>Filter Dog Names by Letter</h2>
+            <p>Let’s find some dog names starting with B! Click the button to highlight them in our list of furry friends.</p>
+            <ul id="dog-list">
+                <li>Buddy</li>
+                <li>Max</li>
+                <li>Greta (My favorite)</li>
+                <li>Bella</li>
+                <li>Charlie</li>
+                <li>Bailey</li>
+            </ul>
+            <button id="filter-btn">Find Names Starting with 'B'</button>
+        </section>
+    </main>
     <footer>
         <p>2025 Furry Friends Hub - Made for Dog Lovers Everywhere</p>
     </footer>
     <script src="script.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $("#fade-in-btn").click(function(){
+            $("#dog-tip").fadeIn(1000);
+        });
+        $("#fade-out-btn").click(function(){
+            $("#dog-tip").fadeOut(1000);
+        });
+    });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+        $("#style-btn").click(function(){
+            $("#dog-breed").css({
+                "background-color": "#f0e4d0",
+                "color": "#4e342e",
+                "font-size": "20px",
+                "padding": "10px",
+                "border": "1px solid #8b5a2b",
+                "border-radius": "5px"
+            });
+        });
+    });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+        $("#filter-btn").click(function(){
+            $("#dog-list li").filter(function(){
+                return $(this).text().startsWith("B");
+            }).css({
+                "background-color": "#ff6347",
+                "border": "2px solid #8b5a2b"
+            });
+        });
+    });
+    </script>
 </body>
 </html>
